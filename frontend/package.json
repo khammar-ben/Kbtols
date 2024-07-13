@@ -21,7 +21,7 @@
   "scripts": {
     "start": "concurrently \"npm run start-react\" \"npm run start-api\"",
     "start-react": "react-scripts start",
-    "start-api": "python ../backend/myenv/api.py",
+    "start-api": "python ../backend/api.py",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

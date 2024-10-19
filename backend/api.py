@@ -28,6 +28,7 @@ def check_records():
     
     return jsonify(results)
 
+
 frontend_folder = os.path.join(os.getcwd(), "..", "frontend") 
 build_folder = os.path.join(frontend_folder,"build")
 
@@ -38,6 +39,7 @@ def index(filename):
     if not filename:
         filename = "index.html"
     return send_from_directory(build_folder,filename)
+
 
 
 

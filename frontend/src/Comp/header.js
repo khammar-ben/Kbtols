@@ -21,8 +21,8 @@ const Header = () => {
             </a>
           </li>
           <li className="main-list">
-            <a className="main-link" href="/Check_spf_dmarc">
-              Check SPF & DMARC
+            <a className="main-link" href="/CompareInputs">
+             Compare Inputs
             </a>
           </li>
           <li className="main-list">

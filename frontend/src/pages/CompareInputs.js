@@ -1,3 +1,5 @@
+import Header from '../Comp/header';
+import Footer from '../Comp/footer';
 import React, { useState } from 'react';
 import './CompareInputs.css';
 
@@ -42,9 +44,6 @@ function CompareInputs() {
         setComparisonResult([]);
     };
 
-    const toggleText = () => {
-        setIsFirstText(!isFirstText); // Toggle between first and second text
-    };
 
     const handleSwitchTexts = () => {
         setInputText1(inputText2);
@@ -52,6 +51,7 @@ function CompareInputs() {
     };
 
     return (
+        <><Header /> 
         <div className="compare-container">
             <h1 className="title">Text Comparison Tool</h1>
             <div className="input-area">
@@ -99,6 +99,8 @@ function CompareInputs() {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     );
 }
 

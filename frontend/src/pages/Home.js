@@ -19,7 +19,7 @@ const Home = () => {
       <div className="link">
         <a href="/Shufl_Lines">Shuffles Lines</a> <br/><br/>
         <a href="/TextToHtml">Text To HTML</a><br/><br/>
-        <a href="/Check_spf_dmarc">Check SPF & DMARC of Domains</a><br/><br/>
+        <a href="/CompareInputs">Compare Inputs</a><br/><br/>
       </div>
    
     </div>

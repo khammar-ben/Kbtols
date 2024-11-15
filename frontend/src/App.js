@@ -30,9 +30,9 @@ export function App() {
     },
 
     {
-      path: "/Check_spf_dmarc",
+      path: "/CompareInputs",
       // eslint-disable-next-line react/jsx-pascal-case
-      element: <Check_spf_dmarc />,
+      element: <CompareInputs />,
     },
 
     {
@@ -51,11 +51,7 @@ export function App() {
       // eslint-disable-next-line react/jsx-pascal-case
       element: <TextToHtml />,
     },
-    {
-      path: "/CompareInputs",
-      // eslint-disable-next-line react/jsx-pascal-case
-      element: <CompareInputs />,
-    },
+    
   ]);
 
   const root = ReactDOM.createRoot(document.getElementById("root"));

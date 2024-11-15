@@ -8,6 +8,7 @@ import Check_spf_dmarc from "./pages/check_spf_dmarc.js";
 import Shufl_U_L from "./pages/Shufl_U_L.js";
 import Shufl_Lines from "./pages/Shufl_Lines.js";
 import TextToHtml from "./pages/TextToHtml.js";
+import CompareInputs from "./pages/CompareInputs.js";
 
 export function App() {
 
@@ -49,6 +50,11 @@ export function App() {
       path: "/TextToHtml",
       // eslint-disable-next-line react/jsx-pascal-case
       element: <TextToHtml />,
+    },
+    {
+      path: "/CompareInputs",
+      // eslint-disable-next-line react/jsx-pascal-case
+      element: <CompareInputs />,
     },
   ]);
 

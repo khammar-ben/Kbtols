@@ -1,22 +1,16 @@
-// server.js or wherever you configure your Express server
 const express = require('express');
-const { createProxyMiddleware } = require('http-proxy-middleware');
-
+const path = require('path');
 const app = express();
 
-// Add proxy middleware
-app.use(
-    '/app',
-    createProxyMiddleware({
-        target: 'http://localhost:5000', // Your backend server URL
-        changeOrigin: true,
-    })
-);
+// Serve static files from the build folder
+app.use(express.static(path.join(__dirname, 'build')));
 
-// Add other middleware and routes
-// ...
+// Route all requests to index.html to avoid redirects
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
-// Start the server
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

@@ -1,6 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.js";
 import IpExtractor from "./pages/IpExtractor.js";
 import ExtractDomains from "./pages/ExtractDomains.js";
@@ -9,10 +8,24 @@ import Shufl_Lines from "./pages/Shufl_Lines.js";
 import TextToHtml from "./pages/TextToHtml.js";
 import CompareInputs from "./pages/CompareInputs.js";
 
-
-
 export function App() {
 
+  return (
+    <>
+      <Routes>
+        <Route path='/' exact element={<Home />} errorElement={<h1>SORROY.........</h1>} />
+        <Route path='/IpExtractor' element={<IpExtractor />}/>
+        <Route path='/ExtractDomains' element={<ExtractDomains />}/>
+        <Route path='/Shufl_U_L' element={<Shufl_U_L />}/>
+        <Route path='/Shufl_Lines' element={<Shufl_Lines />}/>
+        <Route path='/TextToHtml' element={<TextToHtml />}/>
+        <Route path='/CompareInputs' element={<CompareInputs />}/>
+  
+      </Routes>
+    </>
+  );
+}
+/*
   const router = createBrowserRouter([
     {
       path: "/",
@@ -31,7 +44,7 @@ export function App() {
     },
 
     {
-      path: "/CompareInputs",
+      path: "/Check_spf_dmarc",
       // eslint-disable-next-line react/jsx-pascal-case
       element: <CompareInputs />,
     },
@@ -52,7 +65,11 @@ export function App() {
       // eslint-disable-next-line react/jsx-pascal-case
       element: <TextToHtml />,
     },
-
+    {
+      path: "/CompareInputs",
+      // eslint-disable-next-line react/jsx-pascal-case
+      element: <CompareInputs />,
+    },
   ]);
 
   const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -63,4 +80,5 @@ export function App() {
   );
 
 }
+*/
 export default App; // Ensure this line exports App as the default export
